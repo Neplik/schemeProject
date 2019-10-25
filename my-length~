@@ -1,0 +1,5 @@
+(define my-length
+  (lambda (list)
+    (if (null? list)
+	0
+	(+ 1 (my-length (cdr (list)))))))

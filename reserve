@@ -1,0 +1,11 @@
+(define my-reserve1
+    (lambda (l c)
+      (if (null? l)
+	  c
+	  (my-reserve1 (cdr l) (cons (car l) c)) )))
+
+(define my-reserve
+  (lambda (l)
+    (my-reserve1 l '())))
+
+(my-reserve '(1 2 3 4))
